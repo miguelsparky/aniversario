@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz San Valentín, Mi Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+        --red-love: #c62e65; /* Un rojo rosado más elegante */
+        --pink-soft: #ffe4e9;
+        --cream-paper: #fffdf9;
+        --text-dark: #4a001e;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Quicksand', sans-serif;
+        /* Fondo con degradado suave y romántico */
+        background: linear-gradient(135deg, #fff0f3 0%, #ffe4e9 100%);
+        color: var(--text-dark);
+        overflow-x: hidden;
+    }
+
+    /* --- ANIMACIÓN DE ENTRADA SUAVE --- */
+    .fade-in {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- ENCABEZADO MEJORADO --- */
+    header {
+        min-height: 90vh; /* Un poco más alto para imponer más */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* Fondo con textura sutil de corazones (opcional, se ve pro sin él también) */
+        background-image: radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    }
+
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 5rem; /* Título más grande e impactante */
+        color: var(--red-love);
+        margin: 0;
+        text-shadow: 3px 3px 6px rgba(198, 46, 101, 0.2);
+    }
+
+    .sub-aniversario {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-top: 15px;
+        color: var(--red-love);
+        letter-spacing: 1px;
+    }
+
+    /* --- TARJETAS DE FOTOS ULTRA-PROFESIONALES --- */
+    .section {
+        padding: 80px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 25px; /* Bordes más redondeados */
+        padding: 20px;
+        /* Sombra multicapa para un efecto 3D muy suave */
+        box-shadow: 
+            0 10px 20px rgba(198, 46, 101, 0.05),
+            0 6px 6px rgba(198, 46, 101, 0.1);
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición súper fluida */
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+
+    .card:hover {
+        top: -15px; /* Se eleva suavemente */
+        box-shadow: 
+            0 20px 40px rgba(198, 46, 101, 0.15),
+            0 15px 12px rgba(198, 46, 101, 0.1);
+    }
+
+    .card img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 20px;
+        /* Filtro inicial: un poco desaturado y con menos brillo */
+        filter: saturate(90%) brightness(95%);
+        transition: all 0.5s ease;
+    }
+
+    .card:hover img {
+        /* Al pasar el mouse: colores vibrantes y brillo total */
+        filter: saturate(110%) brightness(105%);
+        transform: scale(1.02); /* Zoom muy sutil en la foto */
+    }
+
+    .card p {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.6rem;
+        margin-top: 25px;
+        color: var(--red-love);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    }
+
+    /* --- CARTA DE AMOR TIPO PAPEL --- */
+    .love-letter {
+        background-color: var(--cream-paper);
+        /* Textura de papel sutil */
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) 100%), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ0IiB2aWV3Qm94PSIwIDAgNCA0Ij48cGF0aCBmaWxsPSIjZDljZGEwIiBmaWxsLW9wYWNpdHk9IjAuMTUiIGQ9Ik0xIDNoMXYxSDF6TTMgMGgxdjFIM3pNMCAyaDF2MUgwem0yIDFoMXYxSDJ6Ii8+PC9zdmc+');
+        padding: 60px;
+        border-radius: 10px;
+        /* Doble borde elegante */
+        box-shadow: 
+            0 0 0 10px var(--cream-paper),
+            0 0 0 12px var(--red-love),
+            0 20px 50px rgba(0,0,0,0.1);
+        margin: 60px auto;
+        max-width: 650px;
+        line-height: 2;
+        font-size: 1.1rem;
+        position: relative;
+    }
+    
+    /* Efecto de "sello" o cinta en la parte superior */
+    .love-letter::before {
+        content: '❤️';
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        background: var(--cream-paper);
+        padding: 0 20px;
+        border-radius: 50%;
+    }
+
+    .love-letter h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5rem;
+        color: var(--red-love);
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    button {
+        background: linear-gradient(45deg, var(--red-love), #ff4d6d); /* Botón con degradado */
+        color: white;
+        border: none;
+        padding: 18px 50px;
+        font-size: 1.3rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote al hover */
+        box-shadow: 0 10px 20px rgba(198, 46, 101, 0.3);
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    button:hover {
+        transform: scale(1.05) translateY(-3px);
+        box-shadow: 0 15px 30px rgba(198, 46, 101, 0.4);
+    }
+    
+    #final {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2rem;
+    }
+
+    /* --- CORAZONES FLOTANTES (Más sutiles) --- */
+    .hearts-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.6; /* Más transparentes para no distraer */
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(100vh) scale(0.5) rotate(0deg); opacity: 0; }
+        20% { opacity: 0.8; }
+        100% { transform: translateY(-20vh) scale(1.2) rotate(360deg); opacity: 0; }
+    }
+
+    .floating-heart {
+        position: absolute;
+        color: var(--red-love);
+        font-size: 25px;
+        animation: float 15s infinite linear; /* Más lentos y suaves */
+        text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    }
+        
+    </style>
+</head>
+<body>
+
+    <div class="hearts-bg" id="hearts-container"></div>
+
+    <header>
+        <h1>¡Feliz San Valentín!</h1>
+        <div class="sub-aniversario">Y felices 3 años juntos... ❤️</div>
+        <p style="margin-top: 40px; font-style: italic;">Haz scroll para ver nuestra historia</p>
+    </header>
+
+    <div class="section">
+        <div class="gallery">
+            <div class="card">
+                <img src="https://i.postimg.cc/1tPccTRm/Imagen-1.jpg" alt="Momento 1">
+                <p>Donde todo empezó...</p>
+            </div>
+            <div class="card">
+                <img src="https://i.postimg.cc/R0Tn909S/Imagen-2.jpg" alt="Momento 2">
+                <p>Nuestra aventura favorita.</p>
+            </div>
+            <div class="card">
+                <img src="https://i.postimg.cc/FKh7PQS8/Imagen-3.jpg" alt="Momento 3">
+                <p>Por mil años más así.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="love-letter">
+            <h2>Para mi niña linda,</h2>
+            <p>
+                No tengo palabras para explicar lo agradecido que estoy de tenerte conmigo. 
+                Han sido 2 años increíbles, llenos de risas, apoyo y mucho amor. 
+                Eres lo mejor que me ha pasado y quiero seguir construyendo mi vida a tu lado.
+            </p>
+            <p><strong>Te amo con todo mi corazón.</strong></p>
+            <div style="text-align: center; margin-top: 30px;">
+                <button onclick="document.getElementById('final').innerText='¡TE AMO DEMASIADO! ❤️'; confetti();">
+                    Haz clic aquí
+                </button>
+                <h3 id="final" style="margin-top: 20px; color: var(--red-love);"></h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generador de corazones flotantes
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.getElementById('hearts-container').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
